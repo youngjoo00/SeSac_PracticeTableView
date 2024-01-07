@@ -16,7 +16,6 @@
 		8E38D1042B480559001CEFF4 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E38D1032B480559001CEFF4 /* SettingsTableViewController.swift */; };
 		8E38D1062B480D1C001CEFF4 /* ShoppingCheckListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E38D1052B480D1C001CEFF4 /* ShoppingCheckListTableViewController.swift */; };
 		8E38D1082B480D39001CEFF4 /* ShoppingCheckListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E38D1072B480D39001CEFF4 /* ShoppingCheckListTableViewCell.swift */; };
-		8E38D10A2B480DCD001CEFF4 /* ShoppingSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E38D1092B480DCD001CEFF4 /* ShoppingSearchTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +30,6 @@
 		8E38D1032B480559001CEFF4 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		8E38D1052B480D1C001CEFF4 /* ShoppingCheckListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCheckListTableViewController.swift; sourceTree = "<group>"; };
 		8E38D1072B480D39001CEFF4 /* ShoppingCheckListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCheckListTableViewCell.swift; sourceTree = "<group>"; };
-		8E38D1092B480DCD001CEFF4 /* ShoppingSearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingSearchTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,7 +68,6 @@
 				8E38D1032B480559001CEFF4 /* SettingsTableViewController.swift */,
 				8E38D1052B480D1C001CEFF4 /* ShoppingCheckListTableViewController.swift */,
 				8E38D1072B480D39001CEFF4 /* ShoppingCheckListTableViewCell.swift */,
-				8E38D1092B480DCD001CEFF4 /* ShoppingSearchTableViewCell.swift */,
 				8E38D0F52B480080001CEFF4 /* Main.storyboard */,
 				8E38D0F82B480080001CEFF4 /* Assets.xcassets */,
 				8E38D0FA2B480080001CEFF4 /* LaunchScreen.storyboard */,
@@ -155,7 +152,6 @@
 				8E38D1082B480D39001CEFF4 /* ShoppingCheckListTableViewCell.swift in Sources */,
 				8E38D0F42B480080001CEFF4 /* ViewController.swift in Sources */,
 				8E38D0F02B480080001CEFF4 /* AppDelegate.swift in Sources */,
-				8E38D10A2B480DCD001CEFF4 /* ShoppingSearchTableViewCell.swift in Sources */,
 				8E38D0F22B480080001CEFF4 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -12,5 +12,5 @@ class ShoppingCheckListTableViewCell: UITableViewCell {
     @IBOutlet var checkBtn: UIButton!
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var favoritesBtn: UIButton!
-    
+    @IBOutlet var checkListView: UIView!
 }

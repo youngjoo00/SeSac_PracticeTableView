@@ -13,10 +13,16 @@ class SettingsTableViewController: UITableViewController {
     let personalSettings = ["개인/보안", "알림", "채팅", "멀티프로필"]
     let other = ["고객센터/도움말"]
     
+    @IBOutlet var headerView: UIView!
+    @IBOutlet var headerLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-       
+        view.backgroundColor = .black
+        headerView.backgroundColor = .black
+        headerLabel.text = "설정"
+        headerLabel.textColor = .white
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -46,6 +52,8 @@ class SettingsTableViewController: UITableViewController {
             cell.textLabel?.text = other[indexPath.row]
         }
         
+        cell.backgroundColor = .black
+        cell.textLabel?.textColor = .white
         return cell
     }
     
@@ -63,4 +71,5 @@ class SettingsTableViewController: UITableViewController {
             return "기타"
         }
     }
+
 }
