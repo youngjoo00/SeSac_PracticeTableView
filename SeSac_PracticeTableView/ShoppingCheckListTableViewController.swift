@@ -7,9 +7,19 @@
 
 import UIKit
 
+struct Todo {
+    var list: String
+    var checkbox: Bool
+    var favorites: Bool
+}
+
 class ShoppingCheckListTableViewController: UITableViewController {
 
-    var checkList = ["할 일들을 추가해보세요!", "이거저거 구매하기,,"]
+    var todoList: [Todo] = [Todo(list: "할 일을 입력해보세요.", checkbox: false, favorites: false),
+                            Todo(list: "할 일이 없으신가요??", checkbox: false, favorites: false),
+                            Todo(list: "없으면 안돼요,,", checkbox: false, favorites: false),
+                            Todo(list: "열심히 살아봅시다,,", checkbox: false, favorites: false),
+    ]
     
     @IBOutlet var headerLabel: UILabel!
     @IBOutlet var addListTextField: UITextField!
@@ -31,29 +41,46 @@ class ShoppingCheckListTableViewController: UITableViewController {
     }
     
     @IBAction func addBtnClicked(_ sender: UIButton) {
-        checkList.append(addListTextField.text!)
+        todoList.append(Todo(list: addListTextField.text!, checkbox: false, favorites: false))
         tableView.reloadData()
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return checkList.count
+        return todoList.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "CheckListCell", for: indexPath) as! ShoppingCheckListTableViewCell
         
-        cell.checkBtn.setImage(UIImage(systemName: "checkmark.square"), for: .normal)
-        cell.favoritesBtn.setImage(UIImage(systemName: "star.fill"), for: .normal)
+        let checkImage = todoList[indexPath.row].checkbox ? "checkmark.square.fill" : "checkmark.square"
+        let starImage = todoList[indexPath.row].favorites ? "star.fill" : "star"
+        
+        cell.checkBtn.setImage(UIImage(systemName: checkImage), for: .normal)
+        cell.favoritesBtn.setImage(UIImage(systemName: starImage), for: .normal)
         cell.favoritesBtn.tintColor = .black
         
-        cell.titleLabel.text = checkList[indexPath.row]
+        cell.titleLabel.text = todoList[indexPath.row].list
 
         cell.checkListView.backgroundColor = .systemGray6
         cell.checkListView.layer.cornerRadius = 8
         cell.checkListView.tintColor = .black
         
+        cell.checkBtn.tag = indexPath.row
+        cell.favoritesBtn.tag = indexPath.row
+        cell.checkBtn.addTarget(self, action: #selector(checkboxBtnClicked), for: .touchUpInside)
+        cell.favoritesBtn.addTarget(self, action: #selector(favoritesBtnClicked), for: .touchUpInside)
         return cell
+    }
+    
+    @objc func checkboxBtnClicked(sender: UIButton) {
+        todoList[sender.tag].checkbox.toggle()
+        tableView.reloadData()
+    }
+    
+    @objc func favoritesBtnClicked(sender: UIButton) {
+        todoList[sender.tag].favorites.toggle()
+        tableView.reloadData()
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -67,7 +94,7 @@ class ShoppingCheckListTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         
         if editingStyle == .delete {
-            checkList.remove(at: indexPath.row)
+            todoList.remove(at: indexPath.row)
             tableView.reloadData()
         }
     }
