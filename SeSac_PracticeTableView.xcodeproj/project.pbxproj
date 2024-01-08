@@ -16,6 +16,9 @@
 		8E38D1042B480559001CEFF4 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E38D1032B480559001CEFF4 /* SettingsTableViewController.swift */; };
 		8E38D1062B480D1C001CEFF4 /* ShoppingCheckListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E38D1052B480D1C001CEFF4 /* ShoppingCheckListTableViewController.swift */; };
 		8E38D1082B480D39001CEFF4 /* ShoppingCheckListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E38D1072B480D39001CEFF4 /* ShoppingCheckListTableViewCell.swift */; };
+		8EC5AB4C2B4C292600480157 /* MagazineInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC5AB4B2B4C292600480157 /* MagazineInfoTableViewCell.swift */; };
+		8EC5AB4E2B4C2A3D00480157 /* MagazineInfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC5AB4D2B4C2A3D00480157 /* MagazineInfoTableViewController.swift */; };
+		8EC5AB512B4C306A00480157 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 8EC5AB502B4C306A00480157 /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,8 @@
 		8E38D1032B480559001CEFF4 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		8E38D1052B480D1C001CEFF4 /* ShoppingCheckListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCheckListTableViewController.swift; sourceTree = "<group>"; };
 		8E38D1072B480D39001CEFF4 /* ShoppingCheckListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCheckListTableViewCell.swift; sourceTree = "<group>"; };
+		8EC5AB4B2B4C292600480157 /* MagazineInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagazineInfoTableViewCell.swift; sourceTree = "<group>"; };
+		8EC5AB4D2B4C2A3D00480157 /* MagazineInfoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagazineInfoTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EC5AB512B4C306A00480157 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +74,8 @@
 				8E38D1032B480559001CEFF4 /* SettingsTableViewController.swift */,
 				8E38D1052B480D1C001CEFF4 /* ShoppingCheckListTableViewController.swift */,
 				8E38D1072B480D39001CEFF4 /* ShoppingCheckListTableViewCell.swift */,
+				8EC5AB4D2B4C2A3D00480157 /* MagazineInfoTableViewController.swift */,
+				8EC5AB4B2B4C292600480157 /* MagazineInfoTableViewCell.swift */,
 				8E38D0F52B480080001CEFF4 /* Main.storyboard */,
 				8E38D0F82B480080001CEFF4 /* Assets.xcassets */,
 				8E38D0FA2B480080001CEFF4 /* LaunchScreen.storyboard */,
@@ -92,6 +100,9 @@
 			dependencies = (
 			);
 			name = SeSac_PracticeTableView;
+			packageProductDependencies = (
+				8EC5AB502B4C306A00480157 /* Kingfisher */,
+			);
 			productName = SeSac_PracticeTableView;
 			productReference = 8E38D0EC2B480080001CEFF4 /* SeSac_PracticeTableView.app */;
 			productType = "com.apple.product-type.application";
@@ -120,6 +131,9 @@
 				Base,
 			);
 			mainGroup = 8E38D0E32B480080001CEFF4;
+			packageReferences = (
+				8EC5AB4F2B4C306A00480157 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 8E38D0ED2B480080001CEFF4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -151,6 +165,8 @@
 				8E38D1062B480D1C001CEFF4 /* ShoppingCheckListTableViewController.swift in Sources */,
 				8E38D1082B480D39001CEFF4 /* ShoppingCheckListTableViewCell.swift in Sources */,
 				8E38D0F42B480080001CEFF4 /* ViewController.swift in Sources */,
+				8EC5AB4E2B4C2A3D00480157 /* MagazineInfoTableViewController.swift in Sources */,
+				8EC5AB4C2B4C292600480157 /* MagazineInfoTableViewCell.swift in Sources */,
 				8E38D0F02B480080001CEFF4 /* AppDelegate.swift in Sources */,
 				8E38D0F22B480080001CEFF4 /* SceneDelegate.swift in Sources */,
 			);
@@ -230,7 +246,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -287,7 +303,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -383,6 +399,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8EC5AB4F2B4C306A00480157 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.10.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8EC5AB502B4C306A00480157 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8EC5AB4F2B4C306A00480157 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8E38D0E42B480080001CEFF4 /* Project object */;
 }
