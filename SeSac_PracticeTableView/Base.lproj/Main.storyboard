@@ -664,9 +664,12 @@
                                     <segment title="First"/>
                                     <segment title="Second"/>
                                 </segments>
+                                <connections>
+                                    <action selector="travelOptionChanged:" destination="Ktz-0J-TIW" eventType="valueChanged" id="1sm-3N-XKm"/>
+                                </connections>
                             </segmentedControl>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="X3J-HU-kgk">
-                                <rect key="frame" x="0.0" y="163" width="393" height="655"/>
+                                <rect key="frame" x="0.0" y="173" width="393" height="645"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="tPS-Pq-1Z7">
                                     <size key="itemSize" width="128" height="128"/>
@@ -690,7 +693,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="K7d-MB-6X6" firstAttribute="bottom" secondItem="X3J-HU-kgk" secondAttribute="bottom" id="4U8-N9-9E3"/>
-                            <constraint firstItem="X3J-HU-kgk" firstAttribute="top" secondItem="OLV-R5-6aQ" secondAttribute="bottom" id="6Gp-NN-Gqm"/>
+                            <constraint firstItem="X3J-HU-kgk" firstAttribute="top" secondItem="OLV-R5-6aQ" secondAttribute="bottom" constant="10" id="6Gp-NN-Gqm"/>
                             <constraint firstItem="K7d-MB-6X6" firstAttribute="trailing" secondItem="X3J-HU-kgk" secondAttribute="trailing" id="Dxt-aL-yYs"/>
                             <constraint firstItem="OLV-R5-6aQ" firstAttribute="top" secondItem="bjA-Uw-LcH" secondAttribute="bottom" constant="20" id="H17-L8-B5x"/>
                             <constraint firstItem="K48-Zx-Rt1" firstAttribute="leading" secondItem="K7d-MB-6X6" secondAttribute="leading" constant="20" id="I7M-OR-1TT"/>

@@ -7,6 +7,13 @@
 
 import UIKit
 
+// 아직 열거형을 어떻게 활용해서 써먹을지 감이 안잡힌다,,
+//enum TravelOption: String {
+//    case all
+//    case domestic
+//    case overseas
+//}
+
 class City_Step3_ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
     @IBOutlet var headerLabel: UILabel!
@@ -32,20 +39,22 @@ class City_Step3_ViewController: UIViewController, UICollectionViewDelegate, UIC
         City(city_name: "대전", city_english_name: "Daejeon", city_explain: "대전, 성심당", city_image: "https://i.namu.wiki/i/fFklvoNy6HqB2XtGHad8aZ9zItaH-ow-H97JlYV5OvgYHWgOfjiL4OPB_7UWLbKdQhJXlIrxs1Q25WomVNz1McMgUZmlME4OpNOI1KUMrOkR05LWsoU7PfXLI_EOKZdy6PCx9Bu7JBNTLbDn8RvdQA.webp", domestic_travel: true),
     ]
     
+    var selectedTravelOption: [City] = []
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return city.count
+        return selectedTravelOption.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CityCollectionViewCell", for: indexPath) as! CityCollectionViewCell
         
-        let row = city[indexPath.row]
+        let row = selectedTravelOption[indexPath.row]
         
         let url = URL(string: "\(row.city_image)")
         cell.cityImageView.kf.setImage(with: url)
 
         cell.koreaNameLabel.text = row.city_name
-        print(cell.koreaNameLabel.frame.height)
+        
         cell.englishNameLabel.text = row.city_english_name
 
         cell.descriptionLabel.text = row.city_explain
@@ -56,13 +65,17 @@ class City_Step3_ViewController: UIViewController, UICollectionViewDelegate, UIC
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        selectedTravelOption = city
+//        allCity = city
+//        domesticCity = city.filter { $0.domestic_travel }
+//        overseasCity = city.filter { !$0.domestic_travel }
+        
         headerLabel.text = "인기 도시"
         headerLabel.font = .boldSystemFont(ofSize: 20)
         headerLabel.textAlignment = .center
         
         headerLineView.backgroundColor = .lightGray
-        
         travelOptionSegment.setTitle("모두", forSegmentAt: 0)
         travelOptionSegment.setTitle("국내", forSegmentAt: 1)
         travelOptionSegment.insertSegment(withTitle: "해외", at: 2, animated: true)
@@ -76,8 +89,6 @@ class City_Step3_ViewController: UIViewController, UICollectionViewDelegate, UIC
         let layout = UICollectionViewFlowLayout()
         let spacing: CGFloat = 12
         
-        // CollectionView 사이즈에 맞게 각 셀의 크기를 2x3 으로 배치하는 것에는 성공
-        // 하지만
         let cellWidth = UIScreen.main.bounds.width - (spacing * 3)
         let cellhieght = UIScreen.main.bounds.height - (spacing * 4)
         
@@ -87,8 +98,25 @@ class City_Step3_ViewController: UIViewController, UICollectionViewDelegate, UIC
         layout.minimumInteritemSpacing = spacing
         
         cityCollectionView.collectionViewLayout = layout
-        
     }
 
+    @IBAction func travelOptionChanged(_ sender: UISegmentedControl) {
+        
+        // 매번 filter 를 사용하면 나중에 데이터가 많아지면 괜찮을까,,
+        switch sender.selectedSegmentIndex {
+        case 0:
+            selectedTravelOption = city
+        case 1:
+            selectedTravelOption = city.filter { $0.domestic_travel }
+            print(selectedTravelOption)
+        case 2:
+            selectedTravelOption = city.filter { !$0.domestic_travel }
+            print(selectedTravelOption)
+        default:
+            break
+        }
+        
+        cityCollectionView.reloadData()
+    }
     
 }
