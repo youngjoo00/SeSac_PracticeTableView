@@ -21,6 +21,7 @@ class MagazineInfoTableViewController: UITableViewController {
     @IBOutlet var headerLabel: UILabel!
     @IBOutlet var headerBottomLineView: UIView!
     
+    
     let magazine: [Magazine] = [
         Magazine(title: "유럽 여행 쇼핑 성지, OOO은 꼭 가세요!", subtitle: "유럽의 인기 쇼핑 명소 총정리", photo_image: "https://i.namu.wiki/i/1E2wCXUwFym-bYSTtV98bCnbQwdfmQVonirXbFOT_93AAbEOxuBKK44nhvh7RQEdcrPkmOO8L6bmO3K4-NDmnlJT5Y7-tG8VRN-KW9W821rHR2-D7TxbkBm_u-RCHCJEDSaCKjeIFnhXjyRgrJA51A.webp", date: "231118", link: "https://triple.guide/articles/265bd919-3f75-4adc-8d5d-c5cf60201bfe"),
         Magazine(title: "현지 MZ가 알려주는 오사카 MZ 인기 스팟", subtitle: "2024 오사카 여행엔 여기!", photo_image: "https://i.namu.wiki/i/DjuRgA9wKbXDPwybuUxoyBkCNFYWcY_BbWiuzCbpokF14YwttEFrZcgc4JHz4Hlrw-QRseFvFoqgNhkK2mcIvA7-jJ-Ly4QNUur_zYbTb-wjhGCaDS4S6wjxR5lJcINn7FV1AAdwJKW6kEiGEpMXKg.webp", date: "240103", link: "https://triple.guide/articles/d6c5257f-4d52-4a0a-aed2-6773961ee7be"),
@@ -69,8 +70,6 @@ class MagazineInfoTableViewController: UITableViewController {
         
         let url = URL(string: "\(magazine[indexPath.row].photo_image)")
         cell.magazineImageView.kf.setImage(with: url)
-        cell.magazineImageView.layer.cornerRadius = 16
-        cell.magazineImageView.contentMode = .scaleAspectFill
         // DateFormatter() 를 이용하여 원하는 형식의 날짜 뽑아내기
         // 기존에 String 이었던 값을 -> Date -> String 순서로 변경한다.
         // dateFormat 의 형식에 맞춰서 값이 변하는 사실을 알게 되었다!
