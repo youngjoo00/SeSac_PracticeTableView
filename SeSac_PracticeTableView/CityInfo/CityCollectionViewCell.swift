@@ -25,11 +25,10 @@ class CityCollectionViewCell: UICollectionViewCell {
         koreaNameLabel.textAlignment = .right
         cityImageView.contentMode = .scaleAspectFill
         englishNameLabel.font = .boldSystemFont(ofSize: 20)
-        cityImageView.layer.cornerRadius = cityImageView.frame.height / 2
+        
         descriptionLabel.textColor = .lightGray
         descriptionLabel.numberOfLines = 0
         descriptionLabel.textAlignment = .center
-        
     }
 
     override func layoutSubviews() {
