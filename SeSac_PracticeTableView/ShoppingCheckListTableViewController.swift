@@ -45,6 +45,21 @@ class ShoppingCheckListTableViewController: UITableViewController {
         tableView.reloadData()
     }
     
+    @objc func checkboxBtnClicked(sender: UIButton) {
+        todoList[sender.tag].checkbox.toggle()
+        tableView.reloadData()
+    }
+    
+    @objc func favoritesBtnClicked(sender: UIButton) {
+        todoList[sender.tag].favorites.toggle()
+        tableView.reloadData()
+    }
+    
+}
+
+
+extension ShoppingCheckListTableViewController {
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return todoList.count
     }
@@ -71,16 +86,6 @@ class ShoppingCheckListTableViewController: UITableViewController {
         cell.checkBtn.addTarget(self, action: #selector(checkboxBtnClicked), for: .touchUpInside)
         cell.favoritesBtn.addTarget(self, action: #selector(favoritesBtnClicked), for: .touchUpInside)
         return cell
-    }
-    
-    @objc func checkboxBtnClicked(sender: UIButton) {
-        todoList[sender.tag].checkbox.toggle()
-        tableView.reloadData()
-    }
-    
-    @objc func favoritesBtnClicked(sender: UIButton) {
-        todoList[sender.tag].favorites.toggle()
-        tableView.reloadData()
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

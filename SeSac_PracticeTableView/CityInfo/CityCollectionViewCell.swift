@@ -27,14 +27,15 @@ class CityCollectionViewCell: UICollectionViewCell {
         cityImageView.contentMode = .scaleAspectFill
         englishNameLabel.font = .boldSystemFont(ofSize: 20)
         
+        // 여기서 처음에 한번에 원형으로 만들어주면 되는거 아닐까?
+        DispatchQueue.main.async {
+            self.cityImageView.layer.cornerRadius = self.cityImageView.frame.width / 2
+            self.cityImageView.clipsToBounds = true
+        }
+        
         descriptionLabel.textColor = .lightGray
         descriptionLabel.numberOfLines = 0
         descriptionLabel.textAlignment = .center
-        print(self.frame.height)
     }
 
-    override func layoutSubviews() {
-        print(self.frame.height)
-        cityImageView.layer.cornerRadius = cityImageView.frame.height / 2
-    }
 }

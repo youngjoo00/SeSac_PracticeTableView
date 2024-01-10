@@ -24,7 +24,11 @@ class SettingsTableViewController: UITableViewController {
         headerLabel.text = "설정"
         headerLabel.textColor = .white
     }
+}
 
+
+extension SettingsTableViewController {
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 3
     }

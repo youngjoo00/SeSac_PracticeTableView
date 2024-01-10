@@ -49,9 +49,14 @@ class MagazineInfoTableViewController: UITableViewController {
         headerBottomLineView.backgroundColor = .systemGray5
     }
 
+}
+
+extension MagazineInfoTableViewController {
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return magazine.count
     }
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "MagazineInfoTableViewCell", for: indexPath) as! MagazineInfoTableViewCell
@@ -92,5 +97,5 @@ class MagazineInfoTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 400
     }
-
+    
 }
