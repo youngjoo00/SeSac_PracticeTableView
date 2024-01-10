@@ -14,6 +14,7 @@ class CityCollectionViewCell: UICollectionViewCell {
     @IBOutlet var pipeView: UIView!
     @IBOutlet var englishNameLabel: UILabel!
     @IBOutlet var descriptionLabel: UILabel!
+    @IBOutlet var cityBottomView: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -29,9 +30,11 @@ class CityCollectionViewCell: UICollectionViewCell {
         descriptionLabel.textColor = .lightGray
         descriptionLabel.numberOfLines = 0
         descriptionLabel.textAlignment = .center
+        print(self.frame.height)
     }
 
     override func layoutSubviews() {
+        print(self.frame.height)
         cityImageView.layer.cornerRadius = cityImageView.frame.height / 2
     }
 }

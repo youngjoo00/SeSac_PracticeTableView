@@ -89,14 +89,16 @@ class City_Step3_ViewController: UIViewController, UICollectionViewDelegate, UIC
         let layout = UICollectionViewFlowLayout()
         let spacing: CGFloat = 12
         
+        // 디바이스 기준으로 가로 길이를 잡아놓고,
+        // 가로 길이에 맞춰서 세로길이를 맞추면 셀이 1:1 비율로 나올수밖에 없음 -> 즉, 이미지만 1:1 비율로 나오는거임
+        // 그러니까 가로길이에 * 1.2 ~ 1.5 배로 준다면 1:1.5 이런 형식의 가로세로 비율의 셀이 나와서 이쁘게 레이아웃이 잡힘
         let cellWidth = UIScreen.main.bounds.width - (spacing * 3)
-        let cellhieght = UIScreen.main.bounds.height - (spacing * 4)
+        let cellhieght = (UIScreen.main.bounds.width - (spacing * 3)) * 1.5
         
-        layout.itemSize = CGSize(width: cellWidth / 2, height: cellhieght / 3)
+        layout.itemSize = CGSize(width: cellWidth / 2, height: cellhieght / 2)
         layout.sectionInset = UIEdgeInsets(top: spacing, left: spacing, bottom: spacing, right: spacing)
         layout.minimumLineSpacing = spacing
         layout.minimumInteritemSpacing = spacing
-        
         cityCollectionView.collectionViewLayout = layout
     }
 
