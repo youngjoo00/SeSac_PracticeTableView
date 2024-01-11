@@ -9,7 +9,6 @@ import UIKit
 
 class City_Step3_ViewController: UIViewController {
     
-    @IBOutlet var headerLabel: UILabel!
     @IBOutlet var travelOptionSegment: UISegmentedControl!
     @IBOutlet var cityCollectionView: UICollectionView!
     @IBOutlet var headerLineView: UIView!
@@ -19,16 +18,8 @@ class City_Step3_ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setUI()
         selectedTravelOption = city
-        
-        headerLabel.text = "인기 도시"
-        headerLabel.font = .boldSystemFont(ofSize: 20)
-        headerLabel.textAlignment = .center
-        
-        headerLineView.backgroundColor = .lightGray
-        travelOptionSegment.setTitle("모두", forSegmentAt: 0)
-        travelOptionSegment.setTitle("국내", forSegmentAt: 1)
-        travelOptionSegment.insertSegment(withTitle: "해외", at: 2, animated: true)
         
         cityCollectionView.dataSource = self
         cityCollectionView.delegate = self
@@ -54,6 +45,17 @@ class City_Step3_ViewController: UIViewController {
     
 }
 
+// SetupUI
+extension City_Step3_ViewController {
+    
+    func setUI() {
+        navigationItem.title = "인기 도시"
+        headerLineView.backgroundColor = .lightGray
+        travelOptionSegment.setTitle("모두", forSegmentAt: 0)
+        travelOptionSegment.setTitle("국내", forSegmentAt: 1)
+        travelOptionSegment.insertSegment(withTitle: "해외", at: 2, animated: true)
+    }
+}
 extension City_Step3_ViewController: SetupCityCell {
     
     var identifier: String {
@@ -109,8 +111,9 @@ extension City_Step3_ViewController: UICollectionViewDelegate, UICollectionViewD
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CityCollectionViewCell", for: indexPath) as! CityCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath) as! CityCollectionViewCell
         
+        print(identifier)
         let row = selectedTravelOption[indexPath.row]
         
         let url = URL(string: "\(row.city_image)")
@@ -125,4 +128,11 @@ extension City_Step3_ViewController: UICollectionViewDelegate, UICollectionViewD
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+
+        let detailCityInfoVC = storyboard?.instantiateViewController(withIdentifier: "DetailCityInfoViewController") as! DetailCityInfoViewController
+        
+        navigationController?.pushViewController(detailCityInfoVC, animated: true)
+        
+    }
 }

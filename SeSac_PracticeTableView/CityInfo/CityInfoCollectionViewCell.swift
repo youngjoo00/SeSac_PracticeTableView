@@ -9,6 +9,8 @@ import UIKit
 
 class CityInfoCollectionViewCell: UICollectionViewCell {
     
+    static let identifier = "CityInfoCollectionViewCell"
+    
     @IBOutlet var cityImageView: UIImageView!
     @IBOutlet var koreaNameLabel: UILabel!
     @IBOutlet var englishNameLabel: UILabel!
