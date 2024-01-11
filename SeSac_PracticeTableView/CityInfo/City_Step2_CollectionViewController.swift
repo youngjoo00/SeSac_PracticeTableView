@@ -13,20 +13,15 @@ class City_Step2_CollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        identifier = "CityCollectionViewCell"
     }
     
 }
 
 
 extension City_Step2_CollectionViewController: SetupCityCell {
+
     var identifier: String {
-        get {
-            return self.identifier
-        }
-        set {
-            
-        }
+        return "CityCollectionViewCell"
     }
     
     var city: [City] {
@@ -90,5 +85,4 @@ extension City_Step2_CollectionViewController: SetupCityCell {
         cell.descriptionLabel.text = row.city_explain
         return cell
     }
-    
 }
