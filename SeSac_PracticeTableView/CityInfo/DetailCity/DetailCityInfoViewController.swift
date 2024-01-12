@@ -18,7 +18,7 @@ struct Travel {
 }
 
 class DetailCityInfoViewController: UIViewController {
-
+    
     @IBOutlet var detailCityInfoTableView: UITableView!
     
     let travel: [Travel] = [
@@ -131,7 +131,7 @@ class DetailCityInfoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         configureNaviItemView()
         configureTableView()
         configureView(navigationItemTitle: "도시 상세 정보")
@@ -165,8 +165,9 @@ extension DetailCityInfoViewController {
         
         self.navigationController?.navigationBar.tintColor = .black
     }
-
+    
 }
+
 extension DetailCityInfoViewController: UITableViewDelegate, UITableViewDataSource {
     
     
@@ -177,49 +178,18 @@ extension DetailCityInfoViewController: UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let row = travel[indexPath.row]
+        
         if !row.ad {
-            let cell = detailCityInfoTableView.dequeueReusableCell(withIdentifier: "DetailCityInfoTableViewCell", for: indexPath) as! DetailCityInfoTableViewCell
+            let cell = detailCityInfoTableView.dequeueReusableCell(withIdentifier: DetailCityInfoTableViewCell.identifier, for: indexPath) as! DetailCityInfoTableViewCell
             
-            cell.titleLabel.text = row.title
-            cell.titleLabel.font = .boldSystemFont(ofSize: 18)
+            // 함수를 호출해서 구조체를 넘겨주기
+            cell.setDataCell(data: row)
             
-            cell.descriptionLabel.text = row.description
-            cell.descriptionLabel.textColor = .lightGray
-            cell.descriptionLabel.font = .boldSystemFont(ofSize: 16)
-            
-            // numberFormatter 사용
-            let numberFormatter = NumberFormatter()
-            numberFormatter.numberStyle = .decimal
-
-            let formattedSaveNumber = numberFormatter.string(for: row.save)
-            
-            let randomNumber = Int.random(in: 0...3000)
-            let formattedRandomNumber = numberFormatter.string(for: randomNumber)
-            cell.saveCountLabel.text = "(\(formattedRandomNumber!)) · 저장 \(formattedSaveNumber!)"
-            cell.saveCountLabel.textColor = .lightGray
-            cell.saveCountLabel.font = .systemFont(ofSize: 15)
-            let url = URL(string: "\(row.travel_image!)")
-            cell.DetailCityImageView.kf.setImage(with: url)
-            cell.DetailCityImageView.contentMode = .scaleAspectFill
-            
-            cell.likeBtn.tintColor = .white
             return cell
         } else {
-            let cell = detailCityInfoTableView.dequeueReusableCell(withIdentifier: "AdvertiseTableViewCell", for: indexPath) as! AdvertiseTableViewCell
+            let cell = detailCityInfoTableView.dequeueReusableCell(withIdentifier: AdvertiseTableViewCell.identifier, for: indexPath) as! AdvertiseTableViewCell
             
-            cell.advertiseTitleLabel.text = row.title
-            cell.advertiseTitleLabel.numberOfLines = 0
-            cell.advertiseTitleLabel.font = .boldSystemFont(ofSize: 20)
-            cell.advertiseTitleLabel.textAlignment = .center
-            
-            cell.advertiseLabel.text = "AD"
-            cell.advertiseLabel.backgroundColor = .white
-            cell.advertiseLabel.layer.cornerRadius = 8
-            cell.advertiseLabel.clipsToBounds = true
-            cell.advertiseLabel.textAlignment = .center
-            cell.advertiseLabel.font = .boldSystemFont(ofSize: 15)
-            
-            cell.backgroundColor = UIColor(red: .random(in: 0...1), green: .random(in: 0...1), blue: .random(in: 0...1), alpha: 1)
+            cell.setDataCell(data: row)
             
             return cell
         }
@@ -243,7 +213,7 @@ extension DetailCityInfoViewController: UITableViewDelegate, UITableViewDataSour
         } else {
             let storyBoard = UIStoryboard(name: "City", bundle: nil)
             let vc = storyBoard.instantiateViewController(withIdentifier: "DetailAdvertiseViewController") as! DetailAdvertiseViewController
-
+            
             let nc = UINavigationController(rootViewController: vc)
             nc.modalPresentationStyle = .fullScreen
             present(nc, animated: true)
