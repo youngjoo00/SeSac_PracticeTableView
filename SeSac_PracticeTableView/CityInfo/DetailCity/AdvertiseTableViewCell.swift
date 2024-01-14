@@ -37,9 +37,6 @@ class AdvertiseTableViewCell: UITableViewCell {
         advertiseLabel.textAlignment = .center
         advertiseLabel.font = .boldSystemFont(ofSize: 15)
         
-        // 처음에 보이는 셀의 백그라운드 컬러만 랜덤으로 지정이 되고, 그 뒤로 나오는 재사용되는 셀들에 그 색깔들이 입혀진다.
-        // 그건 또 아닌데?
-        
         backgroundColor = UIColor(red: .random(in: 0...1), green: .random(in: 0...1), blue: .random(in: 0...1), alpha: 1)
         
     }

@@ -40,6 +40,12 @@
 		8EE994C92B54243500B09E2F /* TravelTalk.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EE994C82B54243500B09E2F /* TravelTalk.storyboard */; };
 		8EE994CC2B54262200B09E2F /* TravelTalkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE994CA2B54262200B09E2F /* TravelTalkTableViewCell.swift */; };
 		8EE994CD2B54262200B09E2F /* TravelTalkTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EE994CB2B54262200B09E2F /* TravelTalkTableViewCell.xib */; };
+		8EE994D22B544E2E00B09E2F /* ChatScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE994D12B544E2E00B09E2F /* ChatScreenViewController.swift */; };
+		8EE994D42B544E3C00B09E2F /* ChatScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EE994D32B544E3C00B09E2F /* ChatScreen.storyboard */; };
+		8EE994D72B54550C00B09E2F /* OtherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE994D52B54550C00B09E2F /* OtherTableViewCell.swift */; };
+		8EE994D82B54550C00B09E2F /* OtherTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EE994D62B54550C00B09E2F /* OtherTableViewCell.xib */; };
+		8EE994DB2B54573800B09E2F /* MyselfTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE994D92B54573800B09E2F /* MyselfTableViewCell.swift */; };
+		8EE994DC2B54573800B09E2F /* MyselfTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EE994DA2B54573800B09E2F /* MyselfTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +82,12 @@
 		8EE994C82B54243500B09E2F /* TravelTalk.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TravelTalk.storyboard; sourceTree = "<group>"; };
 		8EE994CA2B54262200B09E2F /* TravelTalkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelTalkTableViewCell.swift; sourceTree = "<group>"; };
 		8EE994CB2B54262200B09E2F /* TravelTalkTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TravelTalkTableViewCell.xib; sourceTree = "<group>"; };
+		8EE994D12B544E2E00B09E2F /* ChatScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatScreenViewController.swift; sourceTree = "<group>"; };
+		8EE994D32B544E3C00B09E2F /* ChatScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChatScreen.storyboard; sourceTree = "<group>"; };
+		8EE994D52B54550C00B09E2F /* OtherTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherTableViewCell.swift; sourceTree = "<group>"; };
+		8EE994D62B54550C00B09E2F /* OtherTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OtherTableViewCell.xib; sourceTree = "<group>"; };
+		8EE994D92B54573800B09E2F /* MyselfTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyselfTableViewCell.swift; sourceTree = "<group>"; };
+		8EE994DA2B54573800B09E2F /* MyselfTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyselfTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +137,7 @@
 		8E3FE6D62B4D4D6800D49BDE /* CityInfo */ = {
 			isa = PBXGroup;
 			children = (
+				8EE994D02B544DA700B09E2F /* ChatScreen */,
 				8EE994C52B5423EE00B09E2F /* TravelTalk */,
 				8E8DD65C2B4FF5C10029C8CE /* Protocol */,
 				8E8DD6562B4FE2B10029C8CE /* PracticeCity */,
@@ -192,6 +205,19 @@
 				8EE994CB2B54262200B09E2F /* TravelTalkTableViewCell.xib */,
 			);
 			path = TravelTalk;
+			sourceTree = "<group>";
+		};
+		8EE994D02B544DA700B09E2F /* ChatScreen */ = {
+			isa = PBXGroup;
+			children = (
+				8EE994D12B544E2E00B09E2F /* ChatScreenViewController.swift */,
+				8EE994D32B544E3C00B09E2F /* ChatScreen.storyboard */,
+				8EE994D52B54550C00B09E2F /* OtherTableViewCell.swift */,
+				8EE994D62B54550C00B09E2F /* OtherTableViewCell.xib */,
+				8EE994D92B54573800B09E2F /* MyselfTableViewCell.swift */,
+				8EE994DA2B54573800B09E2F /* MyselfTableViewCell.xib */,
+			);
+			path = ChatScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,11 +290,14 @@
 				8E38D0F92B480080001CEFF4 /* Assets.xcassets in Resources */,
 				8E3FE6DA2B4D4DA200D49BDE /* CityCollectionViewCell.xib in Resources */,
 				8EE994CD2B54262200B09E2F /* TravelTalkTableViewCell.xib in Resources */,
+				8EE994D42B544E3C00B09E2F /* ChatScreen.storyboard in Resources */,
+				8EE994D82B54550C00B09E2F /* OtherTableViewCell.xib in Resources */,
 				8E8DD6452B4FD96C0029C8CE /* City.storyboard in Resources */,
 				8E8DD65B2B4FF2650029C8CE /* AdvertiseTableViewCell.xib in Resources */,
 				8E38D0F72B480080001CEFF4 /* Main.storyboard in Resources */,
 				8EE994C92B54243500B09E2F /* TravelTalk.storyboard in Resources */,
 				8E8DD6542B4FE2950029C8CE /* DetailCityInfoTableViewCell.xib in Resources */,
+				8EE994DC2B54573800B09E2F /* MyselfTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,6 +308,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EE994D72B54550C00B09E2F /* OtherTableViewCell.swift in Sources */,
 				8E38D1042B480559001CEFF4 /* SettingsTableViewController.swift in Sources */,
 				8EE994CC2B54262200B09E2F /* TravelTalkTableViewCell.swift in Sources */,
 				8E38D1062B480D1C001CEFF4 /* ShoppingCheckListTableViewController.swift in Sources */,
@@ -288,6 +318,7 @@
 				8E8DD6642B500A100029C8CE /* Protocol.swift in Sources */,
 				8E8DD6532B4FE2950029C8CE /* DetailCityInfoTableViewCell.swift in Sources */,
 				8E8DD6502B4FE1900029C8CE /* DetailCityInfoViewController.swift in Sources */,
+				8EE994DB2B54573800B09E2F /* MyselfTableViewCell.swift in Sources */,
 				8E3FE6D52B4D346E00D49BDE /* CityInfoCollectionViewCell.swift in Sources */,
 				8E8DD5F42B4E96600029C8CE /* SetupCityCell.swift in Sources */,
 				8E3FE6D32B4D335200D49BDE /* CityInfoCollectionViewController.swift in Sources */,
@@ -300,6 +331,7 @@
 				8EE994C72B54240800B09E2F /* TravelTalkViewController.swift in Sources */,
 				8E38D0F02B480080001CEFF4 /* AppDelegate.swift in Sources */,
 				8E38D0F22B480080001CEFF4 /* SceneDelegate.swift in Sources */,
+				8EE994D22B544E2E00B09E2F /* ChatScreenViewController.swift in Sources */,
 				8E8DD6622B5006FF0029C8CE /* DetailAdvertiseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Chat Screen View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="ChatScreenViewController" id="Y6W-OH-hqX" customClass="ChatScreenViewController" customModule="SeSac_PracticeTableView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nF2-kk-gbD">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kbf-g2-koP">
+                                <rect key="frame" x="0.0" y="59" width="393" height="2"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="6tH-56-CT5"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZKn-Na-6sQ">
+                                <rect key="frame" x="0.0" y="742" width="393" height="60"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ffX-a0-Yiz">
+                                        <rect key="frame" x="16" y="8" width="361" height="44"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kDT-SX-HNp">
+                                        <rect key="frame" x="326" y="8" width="51" height="44"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="arrowshape.right" catalog="system"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="kDT-SX-HNp" firstAttribute="bottom" secondItem="ffX-a0-Yiz" secondAttribute="bottom" id="328-aL-vA2"/>
+                                    <constraint firstItem="kDT-SX-HNp" firstAttribute="top" secondItem="ffX-a0-Yiz" secondAttribute="top" id="4QR-yi-5X9"/>
+                                    <constraint firstAttribute="bottom" secondItem="ffX-a0-Yiz" secondAttribute="bottom" constant="8" id="9Pw-XD-zb5"/>
+                                    <constraint firstItem="kDT-SX-HNp" firstAttribute="trailing" secondItem="ffX-a0-Yiz" secondAttribute="trailing" id="H9H-l7-Dtl"/>
+                                    <constraint firstItem="ffX-a0-Yiz" firstAttribute="leading" secondItem="ZKn-Na-6sQ" secondAttribute="leading" constant="16" id="XuF-kh-1bz"/>
+                                    <constraint firstItem="ffX-a0-Yiz" firstAttribute="top" secondItem="ZKn-Na-6sQ" secondAttribute="top" constant="8" id="dCA-Hl-cJn"/>
+                                    <constraint firstAttribute="trailing" secondItem="ffX-a0-Yiz" secondAttribute="trailing" constant="16" id="e55-aN-smI"/>
+                                    <constraint firstAttribute="height" constant="60" id="fIM-Su-HSu"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="UNX-Or-7Tm">
+                                <rect key="frame" x="0.0" y="61" width="393" height="681"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="7vF-xz-Pbe"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Kbf-g2-koP" firstAttribute="leading" secondItem="nF2-kk-gbD" secondAttribute="leading" id="1R8-31-Hwq"/>
+                            <constraint firstItem="7vF-xz-Pbe" firstAttribute="trailing" secondItem="ZKn-Na-6sQ" secondAttribute="trailing" id="Agi-lX-hxC"/>
+                            <constraint firstItem="UNX-Or-7Tm" firstAttribute="trailing" secondItem="7vF-xz-Pbe" secondAttribute="trailing" id="Kge-Ui-Rzi"/>
+                            <constraint firstItem="ZKn-Na-6sQ" firstAttribute="top" secondItem="UNX-Or-7Tm" secondAttribute="bottom" id="awc-yu-hRf"/>
+                            <constraint firstItem="UNX-Or-7Tm" firstAttribute="top" secondItem="Kbf-g2-koP" secondAttribute="bottom" id="hUs-Mm-q0b"/>
+                            <constraint firstAttribute="trailing" secondItem="Kbf-g2-koP" secondAttribute="trailing" id="kaW-Do-bSZ"/>
+                            <constraint firstItem="ZKn-Na-6sQ" firstAttribute="leading" secondItem="7vF-xz-Pbe" secondAttribute="leading" id="kah-dJ-Jqs"/>
+                            <constraint firstItem="7vF-xz-Pbe" firstAttribute="bottom" secondItem="ZKn-Na-6sQ" secondAttribute="bottom" constant="16" id="lfp-eA-h2Q"/>
+                            <constraint firstItem="Kbf-g2-koP" firstAttribute="top" secondItem="7vF-xz-Pbe" secondAttribute="top" id="mjH-ez-wws"/>
+                            <constraint firstItem="UNX-Or-7Tm" firstAttribute="leading" secondItem="7vF-xz-Pbe" secondAttribute="leading" id="nls-xb-Tcg"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="chatBtn" destination="kDT-SX-HNp" id="lb1-2Z-aDw"/>
+                        <outlet property="chatScreenTableView" destination="UNX-Or-7Tm" id="0Hx-3S-6Io"/>
+                        <outlet property="chatTextField" destination="ffX-a0-Yiz" id="VIH-4R-S8f"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="72.51908396946564" y="-28.169014084507044"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrowshape.right" catalog="system" width="128" height="104"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

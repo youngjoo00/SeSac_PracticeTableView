@@ -34,8 +34,8 @@ class TravelTalkTableViewCell: UITableViewCell {
         // 아.. 이미지 중앙에 이쁘게 넣고싶다..
         self.userImageView.contentMode = .scaleAspectFill
         self.userImageView.clipsToBounds = true
+        
         DispatchQueue.main.async {
-            self.userImageView.contentMode = .scaleAspectFill
             self.userImageView.layer.cornerRadius = self.userImageView.frame.width / 2
         }
         

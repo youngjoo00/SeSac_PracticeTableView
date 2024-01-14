@@ -59,6 +59,18 @@ struct Chat {
             return "잘못된 날짜"
         }
     }
+    
+    var formattedTime: String {
+        let format = DateFormatter()
+        format.dateFormat = "yy.MM.dd HH:mm"
+        if let date = format.date(from: self.date) {
+            format.dateFormat = "HH:mm a"
+            format.locale = Locale(identifier: "ko_KR")
+            return format.string(from: date)
+        } else {
+            return "잘못된 시간"
+        }
+    }
 }
 
 class TravelTalkViewController: UIViewController {
@@ -252,7 +264,9 @@ class TravelTalkViewController: UIViewController {
         configureTableView()
     }
     
-
+    override func viewWillAppear(_ animated: Bool) {
+        tabBarController?.tabBar.isHidden = false
+    }
 
 }
 
@@ -303,4 +317,12 @@ extension TravelTalkViewController: UITableViewDelegate, UITableViewDataSource {
         return 80
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let ChatScreenSB = UIStoryboard(name: "ChatScreen", bundle: nil)
+        let ChatScreenVC = ChatScreenSB.instantiateViewController(withIdentifier: "ChatScreenViewController") as! ChatScreenViewController
+        
+        ChatScreenVC.chatData = mockChatList[indexPath.row]
+        navigationController?.pushViewController(ChatScreenVC, animated: true)
+    }
 }
