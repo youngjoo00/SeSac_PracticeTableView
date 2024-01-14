@@ -8,5 +8,5 @@
 import UIKit
 
 protocol viewProtocol {
-    func configureView(navigationItemTitle naviTitle: String)
+    func configureNaviTitle(navigationItemTitle naviTitle: String)
 }

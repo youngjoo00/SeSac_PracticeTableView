@@ -12,7 +12,7 @@ class DetailAdvertiseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        configureView(navigationItemTitle: "광고 화면")
+        configureNaviTitle(navigationItemTitle: "광고 화면")
         
         configureNaviItemView()
     }
@@ -36,7 +36,7 @@ extension DetailAdvertiseViewController {
     }
 }
 extension DetailAdvertiseViewController: viewProtocol {
-    func configureView(navigationItemTitle naviTitle: String) {
+    func configureNaviTitle(navigationItemTitle naviTitle: String) {
         navigationItem.title = naviTitle
     }
     

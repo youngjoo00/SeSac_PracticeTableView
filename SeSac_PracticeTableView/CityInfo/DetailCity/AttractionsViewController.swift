@@ -13,7 +13,7 @@ class AttractionsViewController: UIViewController {
         super.viewDidLoad()
 
         configureNaviItemView()
-        configureView(navigationItemTitle: "관광지 화면")
+        configureNaviTitle(navigationItemTitle: "관광지 화면")
     }
     
     @objc func leftBarButtonItemClicked() {
@@ -36,7 +36,7 @@ extension AttractionsViewController {
     }
 }
 extension AttractionsViewController: viewProtocol {
-    func configureView(navigationItemTitle naviTitle: String) {
+    func configureNaviTitle(navigationItemTitle naviTitle: String) {
         navigationItem.title = naviTitle
     }
     

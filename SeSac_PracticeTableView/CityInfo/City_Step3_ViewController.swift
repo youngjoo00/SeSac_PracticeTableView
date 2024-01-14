@@ -7,6 +7,9 @@
 
 import UIKit
 
+enum CityInfo {
+    
+}
 class City_Step3_ViewController: UIViewController {
     
     @IBOutlet var travelOptionSegment: UISegmentedControl!
@@ -113,7 +116,6 @@ extension City_Step3_ViewController: UICollectionViewDelegate, UICollectionViewD
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath) as! CityCollectionViewCell
         
-        print(identifier)
         let row = selectedTravelOption[indexPath.row]
         
         let url = URL(string: "\(row.city_image)")

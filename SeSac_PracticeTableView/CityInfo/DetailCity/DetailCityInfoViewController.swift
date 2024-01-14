@@ -134,7 +134,7 @@ class DetailCityInfoViewController: UIViewController {
         
         configureNaviItemView()
         configureTableView()
-        configureView(navigationItemTitle: "도시 상세 정보")
+        configureNaviTitle(navigationItemTitle: "도시 상세 정보")
     }
     
 }
@@ -142,7 +142,7 @@ class DetailCityInfoViewController: UIViewController {
 // ui 공용 세팅
 extension DetailCityInfoViewController: viewProtocol {
     
-    func configureView(navigationItemTitle naviTitle: String) {
+    func configureNaviTitle(navigationItemTitle naviTitle: String) {
         navigationItem.title = naviTitle
     }
     
@@ -197,11 +197,7 @@ extension DetailCityInfoViewController: UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
-        if !travel[indexPath.row].ad {
-            return 150
-        } else {
-            return 100
-        }
+        return !travel[indexPath.row].ad ? 150 : 100
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
