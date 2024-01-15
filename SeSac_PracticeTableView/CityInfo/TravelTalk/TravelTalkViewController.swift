@@ -270,7 +270,7 @@ class TravelTalkViewController: UIViewController {
 
 }
 
-extension TravelTalkViewController: viewProtocol {
+extension TravelTalkViewController: NaviTitleProtocol {
     func configureNaviTitle(navigationItemTitle naviTitle: String) {
         navigationItem.title = naviTitle
     }

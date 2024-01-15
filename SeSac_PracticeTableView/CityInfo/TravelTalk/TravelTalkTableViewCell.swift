@@ -8,8 +8,6 @@
 import UIKit
 
 class TravelTalkTableViewCell: UITableViewCell {
-
-    static let identifier = "TravelTalkTableViewCell"
     
     @IBOutlet var userImageView: UIImageView!
     @IBOutlet var nicknameLabel: UILabel!

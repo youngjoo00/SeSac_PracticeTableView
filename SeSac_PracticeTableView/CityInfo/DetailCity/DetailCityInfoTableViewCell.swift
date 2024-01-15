@@ -16,8 +16,6 @@ class DetailCityInfoTableViewCell: UITableViewCell {
     @IBOutlet var DetailCityImageView: UIImageView!
     @IBOutlet var likeBtn: UIButton!
     
-    static let identifier = "DetailCityInfoTableViewCell"
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         

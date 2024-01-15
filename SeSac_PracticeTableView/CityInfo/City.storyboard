@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="6KV-6y-F1X">
-                                <rect key="frame" x="0.0" y="156" width="393" height="613"/>
+                                <rect key="frame" x="0.0" y="217" width="393" height="552"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="V8c-p0-0Vx">
                                     <size key="itemSize" width="128" height="128"/>
@@ -38,14 +38,14 @@
                                 </cells>
                             </collectionView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XnU-w2-Uuz">
-                                <rect key="frame" x="0.0" y="103" width="393" height="2"/>
+                                <rect key="frame" x="0.0" y="164" width="393" height="2"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="2" id="tLz-tV-Mf7"/>
                                 </constraints>
                             </view>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="H3j-fU-7xI">
-                                <rect key="frame" x="20" y="125" width="353" height="32"/>
+                                <rect key="frame" x="20" y="176" width="353" height="32"/>
                                 <segments>
                                     <segment title="First"/>
                                     <segment title="Second"/>
@@ -54,21 +54,31 @@
                                     <action selector="travelOptionChanged:" destination="jbl-TX-lKk" eventType="valueChanged" id="LQn-N6-89r"/>
                                 </connections>
                             </segmentedControl>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="PXo-Nw-mG8">
+                                <rect key="frame" x="16" y="103" width="361" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="jbl-TX-lKk" id="adt-EV-Cee"/>
+                                </connections>
+                            </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Nep-oU-fhP"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="PXo-Nw-mG8" firstAttribute="top" secondItem="Nep-oU-fhP" secondAttribute="top" id="0Hq-0I-Tkx"/>
                             <constraint firstItem="Nep-oU-fhP" firstAttribute="trailing" secondItem="H3j-fU-7xI" secondAttribute="trailing" constant="20" id="5IE-BV-E7Z"/>
+                            <constraint firstItem="6KV-6y-F1X" firstAttribute="top" secondItem="H3j-fU-7xI" secondAttribute="bottom" constant="10" id="DVE-bu-NDg"/>
+                            <constraint firstItem="XnU-w2-Uuz" firstAttribute="top" secondItem="PXo-Nw-mG8" secondAttribute="bottom" constant="5" id="GZf-2g-DwP"/>
+                            <constraint firstItem="Nep-oU-fhP" firstAttribute="trailing" secondItem="PXo-Nw-mG8" secondAttribute="trailing" constant="16" id="HsV-uv-hei"/>
                             <constraint firstItem="Nep-oU-fhP" firstAttribute="trailing" secondItem="H3j-fU-7xI" secondAttribute="trailing" constant="20" id="LHD-ox-lPL"/>
-                            <constraint firstItem="6KV-6y-F1X" firstAttribute="top" secondItem="H3j-fU-7xI" secondAttribute="bottom" id="W9g-7s-sJq"/>
+                            <constraint firstItem="H3j-fU-7xI" firstAttribute="top" secondItem="XnU-w2-Uuz" secondAttribute="bottom" constant="10" id="W2v-gn-lDE"/>
                             <constraint firstItem="6KV-6y-F1X" firstAttribute="leading" secondItem="Nep-oU-fhP" secondAttribute="leading" id="Xl6-co-gAb"/>
                             <constraint firstItem="6KV-6y-F1X" firstAttribute="bottom" secondItem="Nep-oU-fhP" secondAttribute="bottom" id="Xqc-C3-fiU"/>
                             <constraint firstItem="6KV-6y-F1X" firstAttribute="trailing" secondItem="Nep-oU-fhP" secondAttribute="trailing" id="a5R-tR-kLt"/>
-                            <constraint firstAttribute="trailing" secondItem="XnU-w2-Uuz" secondAttribute="trailing" id="acF-7O-AEo"/>
-                            <constraint firstItem="H3j-fU-7xI" firstAttribute="top" secondItem="XnU-w2-Uuz" secondAttribute="bottom" constant="20" id="eOb-zp-CDQ"/>
-                            <constraint firstItem="XnU-w2-Uuz" firstAttribute="top" secondItem="Nep-oU-fhP" secondAttribute="top" id="s7b-gf-JxY"/>
+                            <constraint firstItem="PXo-Nw-mG8" firstAttribute="leading" secondItem="Nep-oU-fhP" secondAttribute="leading" constant="16" id="bdf-P2-lRl"/>
+                            <constraint firstItem="XnU-w2-Uuz" firstAttribute="leading" secondItem="qTI-3Y-7ap" secondAttribute="leading" id="bqQ-LQ-XKe"/>
+                            <constraint firstAttribute="trailing" secondItem="XnU-w2-Uuz" secondAttribute="trailing" id="pfy-K6-V69"/>
                             <constraint firstItem="H3j-fU-7xI" firstAttribute="leading" secondItem="Nep-oU-fhP" secondAttribute="leading" constant="20" id="u9J-r7-OwW"/>
-                            <constraint firstItem="XnU-w2-Uuz" firstAttribute="leading" secondItem="qTI-3Y-7ap" secondAttribute="leading" id="wKJ-Nr-gMV"/>
                             <constraint firstItem="H3j-fU-7xI" firstAttribute="leading" secondItem="Nep-oU-fhP" secondAttribute="leading" constant="20" id="zms-2b-ahE"/>
                         </constraints>
                     </view>
@@ -77,6 +87,7 @@
                         <outlet property="cityCollectionView" destination="6KV-6y-F1X" id="B9J-37-bCq"/>
                         <outlet property="headerLineView" destination="XnU-w2-Uuz" id="ukm-Yq-e4m"/>
                         <outlet property="travelOptionSegment" destination="H3j-fU-7xI" id="c0I-p3-pF7"/>
+                        <outlet property="travelSearchBar" destination="PXo-Nw-mG8" id="v8j-Pm-4vn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tqY-YS-ZJ3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

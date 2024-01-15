@@ -8,8 +8,6 @@
 import UIKit
 
 class OtherTableViewCell: UITableViewCell {
-
-    static let identifier = "OtherTableViewCell"
     
     @IBOutlet var otherImageView: UIImageView!
     @IBOutlet var otherNameLabel: UILabel!

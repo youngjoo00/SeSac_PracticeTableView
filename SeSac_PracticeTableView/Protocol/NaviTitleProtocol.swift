@@ -7,6 +7,6 @@
 
 import UIKit
 
-protocol viewProtocol {
+protocol NaviTitleProtocol {
     func configureNaviTitle(navigationItemTitle naviTitle: String)
 }

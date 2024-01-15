@@ -18,8 +18,7 @@ struct Magazine {
 
 class MagazineInfoTableViewController: UITableViewController {
 
-    @IBOutlet var headerLabel: UILabel!
-    @IBOutlet var headerBottomLineView: UIView!
+    @IBOutlet var headerLineView: UIView!
     
     
     let magazine: [Magazine] = [
@@ -44,9 +43,8 @@ class MagazineInfoTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        headerLabel.text = "SeSAC TRAVEL"
-        headerLabel.font = .boldSystemFont(ofSize: 20)
-        headerBottomLineView.backgroundColor = .systemGray5
+        navigationItem.title = "SeSAC TRAVEL"
+        headerLineView.backgroundColor = .systemGray5
     }
 
 }
@@ -96,6 +94,15 @@ extension MagazineInfoTableViewController {
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 400
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let vc = storyboard?.instantiateViewController(identifier: MagazineWebViewController.identifier) as! MagazineWebViewController
+        
+        vc.data = magazine[indexPath.row]
+        
+        navigationController?.pushViewController(vc, animated: true)
     }
     
 }

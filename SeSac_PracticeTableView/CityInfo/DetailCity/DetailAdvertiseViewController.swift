@@ -35,7 +35,7 @@ extension DetailAdvertiseViewController {
         navigationItem.leftBarButtonItem?.tintColor = .black
     }
 }
-extension DetailAdvertiseViewController: viewProtocol {
+extension DetailAdvertiseViewController: NaviTitleProtocol {
     func configureNaviTitle(navigationItemTitle naviTitle: String) {
         navigationItem.title = naviTitle
     }

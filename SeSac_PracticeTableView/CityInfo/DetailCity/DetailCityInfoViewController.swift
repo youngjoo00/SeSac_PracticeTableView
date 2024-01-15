@@ -140,7 +140,7 @@ class DetailCityInfoViewController: UIViewController {
 }
 
 // ui 공용 세팅
-extension DetailCityInfoViewController: viewProtocol {
+extension DetailCityInfoViewController: NaviTitleProtocol {
     
     func configureNaviTitle(navigationItemTitle naviTitle: String) {
         navigationItem.title = naviTitle
@@ -203,12 +203,12 @@ extension DetailCityInfoViewController: UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if !travel[indexPath.row].ad {
             let storyBoard = UIStoryboard(name: "City", bundle: nil)
-            let vc = storyBoard.instantiateViewController(withIdentifier: "AttractionsViewController") as! AttractionsViewController
+            let vc = storyBoard.instantiateViewController(withIdentifier: AttractionsViewController.identifier) as! AttractionsViewController
             
             navigationController?.pushViewController(vc, animated: true)
         } else {
             let storyBoard = UIStoryboard(name: "City", bundle: nil)
-            let vc = storyBoard.instantiateViewController(withIdentifier: "DetailAdvertiseViewController") as! DetailAdvertiseViewController
+            let vc = storyBoard.instantiateViewController(withIdentifier: DetailAdvertiseViewController.identifier) as! DetailAdvertiseViewController
             
             let nc = UINavigationController(rootViewController: vc)
             nc.modalPresentationStyle = .fullScreen

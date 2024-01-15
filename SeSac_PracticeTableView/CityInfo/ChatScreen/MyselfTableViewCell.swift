@@ -8,8 +8,6 @@
 import UIKit
 
 class MyselfTableViewCell: UITableViewCell {
-
-    static let identifier = "MyselfTableViewCell"
     
     @IBOutlet var myselfChatLabel: UILabel!
     @IBOutlet var myselfTimeLabel: UILabel!

@@ -15,6 +15,7 @@ class City_Step3_ViewController: UIViewController {
     @IBOutlet var travelOptionSegment: UISegmentedControl!
     @IBOutlet var cityCollectionView: UICollectionView!
     @IBOutlet var headerLineView: UIView!
+    @IBOutlet var travelSearchBar: UISearchBar!
     
     var selectedTravelOption: [City] = []
     
@@ -53,12 +54,15 @@ extension City_Step3_ViewController {
     
     func setUI() {
         navigationItem.title = "인기 도시"
-        headerLineView.backgroundColor = .lightGray
+        headerLineView.backgroundColor = .systemGray5
         travelOptionSegment.setTitle("모두", forSegmentAt: 0)
         travelOptionSegment.setTitle("국내", forSegmentAt: 1)
         travelOptionSegment.insertSegment(withTitle: "해외", at: 2, animated: true)
+        travelSearchBar.searchBarStyle = .minimal
+        travelSearchBar.placeholder = "여행지를 검색해보세요"
     }
 }
+
 extension City_Step3_ViewController: SetupCityCell {
     
     var identifier: String {

@@ -9,8 +9,6 @@ import UIKit
 
 class AdvertiseTableViewCell: UITableViewCell {
     
-    static let identifier = "AdvertiseTableViewCell"
-    
     @IBOutlet var advertiseTitleLabel: UILabel!
     @IBOutlet var advertiseLabel: UILabel!
     

@@ -35,7 +35,7 @@ extension AttractionsViewController {
 
     }
 }
-extension AttractionsViewController: viewProtocol {
+extension AttractionsViewController: NaviTitleProtocol {
     func configureNaviTitle(navigationItemTitle naviTitle: String) {
         navigationItem.title = naviTitle
     }

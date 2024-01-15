@@ -28,7 +28,7 @@ class ChatScreenViewController: UIViewController {
     }
 }
 
-extension ChatScreenViewController: viewProtocol {
+extension ChatScreenViewController: NaviTitleProtocol {
     func configureNaviTitle(navigationItemTitle naviTitle: String) {
         navigationItem.title = naviTitle
     }
