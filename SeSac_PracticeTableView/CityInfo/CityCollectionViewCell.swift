@@ -8,8 +8,6 @@
 import UIKit
 
 class CityCollectionViewCell: UICollectionViewCell {
-
-    static let identifier = "CityCollectionViewCell"
     
     @IBOutlet var cityImageView: UIImageView!
     @IBOutlet var koreaNameLabel: UILabel!
@@ -20,7 +18,6 @@ class CityCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
         
         pipeView.backgroundColor = .black
         

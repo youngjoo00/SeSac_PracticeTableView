@@ -25,6 +25,8 @@
 		8E45C3CC2B5535AC008D81EC /* Magazine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E45C3CB2B5535AC008D81EC /* Magazine.storyboard */; };
 		8E45C3CE2B553666008D81EC /* MagazineWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E45C3CD2B553666008D81EC /* MagazineWebViewController.swift */; };
 		8E45C3D12B5536C0008D81EC /* IdentifierProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E45C3D02B5536C0008D81EC /* IdentifierProtocol.swift */; };
+		8E45C3D42B554B83008D81EC /* CityInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E45C3D32B554B83008D81EC /* CityInfo.swift */; };
+		8E45C3D62B554BDC008D81EC /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E45C3D52B554BDC008D81EC /* City.swift */; };
 		8E8DD5F42B4E96600029C8CE /* SetupCityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8DD5F32B4E96600029C8CE /* SetupCityCell.swift */; };
 		8E8DD6452B4FD96C0029C8CE /* City.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E8DD6442B4FD96C0029C8CE /* City.storyboard */; };
 		8E8DD6502B4FE1900029C8CE /* DetailCityInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8DD64F2B4FE1900029C8CE /* DetailCityInfoViewController.swift */; };
@@ -72,6 +74,8 @@
 		8E45C3CB2B5535AC008D81EC /* Magazine.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Magazine.storyboard; sourceTree = "<group>"; };
 		8E45C3CD2B553666008D81EC /* MagazineWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagazineWebViewController.swift; sourceTree = "<group>"; };
 		8E45C3D02B5536C0008D81EC /* IdentifierProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentifierProtocol.swift; sourceTree = "<group>"; };
+		8E45C3D32B554B83008D81EC /* CityInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityInfo.swift; sourceTree = "<group>"; };
+		8E45C3D52B554BDC008D81EC /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 		8E8DD5F32B4E96600029C8CE /* SetupCityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupCityCell.swift; sourceTree = "<group>"; };
 		8E8DD6442B4FD96C0029C8CE /* City.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = City.storyboard; sourceTree = "<group>"; };
 		8E8DD64F2B4FE1900029C8CE /* DetailCityInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCityInfoViewController.swift; sourceTree = "<group>"; };
@@ -145,6 +149,7 @@
 		8E3FE6D62B4D4D6800D49BDE /* CityInfo */ = {
 			isa = PBXGroup;
 			children = (
+				8E45C3D22B554B4D008D81EC /* Model */,
 				8EE994D02B544DA700B09E2F /* ChatScreen */,
 				8EE994C52B5423EE00B09E2F /* TravelTalk */,
 				8E8DD6562B4FE2B10029C8CE /* PracticeCity */,
@@ -177,6 +182,15 @@
 				8E8DD6632B500A100029C8CE /* NaviTitleProtocol.swift */,
 			);
 			path = Protocol;
+			sourceTree = "<group>";
+		};
+		8E45C3D22B554B4D008D81EC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8E45C3D52B554BDC008D81EC /* City.swift */,
+				8E45C3D32B554B83008D81EC /* CityInfo.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		8E8DD6552B4FE2A10029C8CE /* DetailCity */ = {
@@ -344,11 +358,13 @@
 				8E3FE6D32B4D335200D49BDE /* CityInfoCollectionViewController.swift in Sources */,
 				8E8DD65A2B4FF2650029C8CE /* AdvertiseTableViewCell.swift in Sources */,
 				8E8DD6602B5006E70029C8CE /* AttractionsViewController.swift in Sources */,
+				8E45C3D42B554B83008D81EC /* CityInfo.swift in Sources */,
 				8EC5AB4E2B4C2A3D00480157 /* MagazineInfoTableViewController.swift in Sources */,
 				8EC5AB4C2B4C292600480157 /* MagazineInfoTableViewCell.swift in Sources */,
 				8E3FE6DE2B4D5D0000D49BDE /* City_Step3_ViewController.swift in Sources */,
 				8E3FE6D92B4D4DA200D49BDE /* CityCollectionViewCell.swift in Sources */,
 				8EE994C72B54240800B09E2F /* TravelTalkViewController.swift in Sources */,
+				8E45C3D62B554BDC008D81EC /* City.swift in Sources */,
 				8E38D0F02B480080001CEFF4 /* AppDelegate.swift in Sources */,
 				8E38D0F22B480080001CEFF4 /* SceneDelegate.swift in Sources */,
 				8EE994D22B544E2E00B09E2F /* ChatScreenViewController.swift in Sources */,
