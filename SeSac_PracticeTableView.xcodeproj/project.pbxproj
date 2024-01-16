@@ -27,6 +27,10 @@
 		8E45C3D12B5536C0008D81EC /* IdentifierProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E45C3D02B5536C0008D81EC /* IdentifierProtocol.swift */; };
 		8E45C3D42B554B83008D81EC /* CityInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E45C3D32B554B83008D81EC /* CityInfo.swift */; };
 		8E45C3D62B554BDC008D81EC /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E45C3D52B554BDC008D81EC /* City.swift */; };
+		8E45C3F92B558EE4008D81EC /* NearCinema.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E45C3F82B558EE4008D81EC /* NearCinema.storyboard */; };
+		8E45C3FB2B558EF1008D81EC /* NearCinemaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E45C3FA2B558EF1008D81EC /* NearCinemaViewController.swift */; };
+		8E45C3FE2B558F26008D81EC /* Cinema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E45C3FD2B558F26008D81EC /* Cinema.swift */; };
+		8E45C4002B558F37008D81EC /* CinemaList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E45C3FF2B558F37008D81EC /* CinemaList.swift */; };
 		8E8DD5F42B4E96600029C8CE /* SetupCityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8DD5F32B4E96600029C8CE /* SetupCityCell.swift */; };
 		8E8DD6452B4FD96C0029C8CE /* City.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E8DD6442B4FD96C0029C8CE /* City.storyboard */; };
 		8E8DD6502B4FE1900029C8CE /* DetailCityInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8DD64F2B4FE1900029C8CE /* DetailCityInfoViewController.swift */; };
@@ -76,6 +80,10 @@
 		8E45C3D02B5536C0008D81EC /* IdentifierProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentifierProtocol.swift; sourceTree = "<group>"; };
 		8E45C3D32B554B83008D81EC /* CityInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityInfo.swift; sourceTree = "<group>"; };
 		8E45C3D52B554BDC008D81EC /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
+		8E45C3F82B558EE4008D81EC /* NearCinema.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NearCinema.storyboard; sourceTree = "<group>"; };
+		8E45C3FA2B558EF1008D81EC /* NearCinemaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearCinemaViewController.swift; sourceTree = "<group>"; };
+		8E45C3FD2B558F26008D81EC /* Cinema.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cinema.swift; sourceTree = "<group>"; };
+		8E45C3FF2B558F37008D81EC /* CinemaList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CinemaList.swift; sourceTree = "<group>"; };
 		8E8DD5F32B4E96600029C8CE /* SetupCityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupCityCell.swift; sourceTree = "<group>"; };
 		8E8DD6442B4FD96C0029C8CE /* City.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = City.storyboard; sourceTree = "<group>"; };
 		8E8DD64F2B4FE1900029C8CE /* DetailCityInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCityInfoViewController.swift; sourceTree = "<group>"; };
@@ -132,6 +140,7 @@
 		8E38D0EE2B480080001CEFF4 /* SeSac_PracticeTableView */ = {
 			isa = PBXGroup;
 			children = (
+				8E45C3F72B558EC6008D81EC /* NearCinema */,
 				8E45C3CF2B55369A008D81EC /* Protocol */,
 				8E45C3CA2B553592008D81EC /* Magazine */,
 				8EE994C32B540ABF00B09E2F /* Main */,
@@ -189,6 +198,25 @@
 			children = (
 				8E45C3D52B554BDC008D81EC /* City.swift */,
 				8E45C3D32B554B83008D81EC /* CityInfo.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8E45C3F72B558EC6008D81EC /* NearCinema */ = {
+			isa = PBXGroup;
+			children = (
+				8E45C3FC2B558F09008D81EC /* Model */,
+				8E45C3F82B558EE4008D81EC /* NearCinema.storyboard */,
+				8E45C3FA2B558EF1008D81EC /* NearCinemaViewController.swift */,
+			);
+			path = NearCinema;
+			sourceTree = "<group>";
+		};
+		8E45C3FC2B558F09008D81EC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8E45C3FD2B558F26008D81EC /* Cinema.swift */,
+				8E45C3FF2B558F37008D81EC /* CinemaList.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -318,6 +346,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E38D0FC2B480080001CEFF4 /* LaunchScreen.storyboard in Resources */,
+				8E45C3F92B558EE4008D81EC /* NearCinema.storyboard in Resources */,
 				8E38D0F92B480080001CEFF4 /* Assets.xcassets in Resources */,
 				8E3FE6DA2B4D4DA200D49BDE /* CityCollectionViewCell.xib in Resources */,
 				8EE994CD2B54262200B09E2F /* TravelTalkTableViewCell.xib in Resources */,
@@ -353,12 +382,15 @@
 				8E8DD6532B4FE2950029C8CE /* DetailCityInfoTableViewCell.swift in Sources */,
 				8E8DD6502B4FE1900029C8CE /* DetailCityInfoViewController.swift in Sources */,
 				8EE994DB2B54573800B09E2F /* MyselfTableViewCell.swift in Sources */,
+				8E45C3FB2B558EF1008D81EC /* NearCinemaViewController.swift in Sources */,
 				8E3FE6D52B4D346E00D49BDE /* CityInfoCollectionViewCell.swift in Sources */,
+				8E45C3FE2B558F26008D81EC /* Cinema.swift in Sources */,
 				8E8DD5F42B4E96600029C8CE /* SetupCityCell.swift in Sources */,
 				8E3FE6D32B4D335200D49BDE /* CityInfoCollectionViewController.swift in Sources */,
 				8E8DD65A2B4FF2650029C8CE /* AdvertiseTableViewCell.swift in Sources */,
 				8E8DD6602B5006E70029C8CE /* AttractionsViewController.swift in Sources */,
 				8E45C3D42B554B83008D81EC /* CityInfo.swift in Sources */,
+				8E45C4002B558F37008D81EC /* CinemaList.swift in Sources */,
 				8EC5AB4E2B4C2A3D00480157 /* MagazineInfoTableViewController.swift in Sources */,
 				8EC5AB4C2B4C292600480157 /* MagazineInfoTableViewCell.swift in Sources */,
 				8E3FE6DE2B4D5D0000D49BDE /* City_Step3_ViewController.swift in Sources */,
