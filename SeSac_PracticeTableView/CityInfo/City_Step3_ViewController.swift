@@ -107,7 +107,7 @@ extension City_Step3_ViewController: UICollectionViewDelegate, UICollectionViewD
         let url = URL(string: "\(row.city_image)")
         cell.cityImageView.kf.setImage(with: url)
         
-        let travelSearchBarText = travelSearchBar.text!.uppercased().components(separatedBy: " ").joined()
+//        let travelSearchBarText = travelSearchBar.text!.uppercased().components(separatedBy: " ").joined()
         
         cell.koreaNameLabel.text = row.city_name
         

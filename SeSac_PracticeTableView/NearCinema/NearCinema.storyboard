@@ -27,6 +27,9 @@
                                     <segment title="First"/>
                                     <segment title="Second"/>
                                 </segments>
+                                <connections>
+                                    <action selector="changedSegment:" destination="Y6W-OH-hqX" eventType="valueChanged" id="Aqp-ZF-2Xk"/>
+                                </connections>
                             </segmentedControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
