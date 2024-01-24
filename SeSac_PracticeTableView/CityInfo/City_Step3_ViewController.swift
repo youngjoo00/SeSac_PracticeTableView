@@ -36,6 +36,7 @@ class City_Step3_ViewController: UIViewController {
 
     @IBAction func travelOptionChanged(_ sender: UISegmentedControl) {
         
+        // 여기도 열거형으로 바꿀 수 있을듯
         switch sender.selectedSegmentIndex {
         case 0:
             segmentTravelList = CityInfo.city

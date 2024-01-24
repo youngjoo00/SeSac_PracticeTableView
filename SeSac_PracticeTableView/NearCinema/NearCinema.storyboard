@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aAC-Ff-iee">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
@@ -9,16 +9,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Near Cinema View Controller-->
+        <!--Item-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" customClass="NearCinemaViewController" customModule="SeSac_PracticeTableView" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NearCinemaViewController" id="Y6W-OH-hqX" customClass="NearCinemaViewController" customModule="SeSac_PracticeTableView" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dxA-Nz-jX1">
-                                <rect key="frame" x="0.0" y="90" width="393" height="728"/>
+                                <rect key="frame" x="0.0" y="90" width="393" height="679"/>
                                 <standardMapConfiguration key="preferredConfiguration"/>
                             </mapView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Bm2-Ga-scN">
@@ -44,6 +44,7 @@
                             <constraint firstItem="dxA-Nz-jX1" firstAttribute="top" secondItem="Bm2-Ga-scN" secondAttribute="bottom" id="r9p-pA-RCG"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="lCK-md-sdx"/>
                     <connections>
                         <outlet property="cinemaMapView" destination="dxA-Nz-jX1" id="XwP-pb-RlN"/>
                         <outlet property="cinemaSegmentControl" destination="Bm2-Ga-scN" id="wld-6U-WII"/>
@@ -51,7 +52,72 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="65" y="-34"/>
+            <point key="canvasLocation" x="991.60305343511448" y="-34.507042253521128"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="oOr-KL-97T">
+            <objects>
+                <viewController storyboardIdentifier="NearCinemaSecondViewController" id="wqI-Pa-MxG" customClass="NearCinemaSecondViewController" customModule="SeSac_PracticeTableView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="B6d-nx-ERJ">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w3X-5g-iFb">
+                                <rect key="frame" x="0.0" y="83" width="393" height="686"/>
+                                <standardMapConfiguration key="preferredConfiguration"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rRm-RM-g5U">
+                                <rect key="frame" x="16" y="59" width="24" height="14"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title=""/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d2y-Ce-gTq">
+                                <rect key="frame" x="302" y="59" width="75" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ypq-VV-IZq"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ypq-VV-IZq" firstAttribute="trailing" secondItem="w3X-5g-iFb" secondAttribute="trailing" id="IUb-sz-FDj"/>
+                            <constraint firstItem="w3X-5g-iFb" firstAttribute="top" secondItem="rRm-RM-g5U" secondAttribute="bottom" constant="10" id="Px1-2k-cXn"/>
+                            <constraint firstItem="rRm-RM-g5U" firstAttribute="leading" secondItem="ypq-VV-IZq" secondAttribute="leading" constant="16" id="Uch-2e-rkQ"/>
+                            <constraint firstItem="rRm-RM-g5U" firstAttribute="top" secondItem="ypq-VV-IZq" secondAttribute="top" id="b21-PN-8RX"/>
+                            <constraint firstItem="d2y-Ce-gTq" firstAttribute="trailing" secondItem="ypq-VV-IZq" secondAttribute="trailing" constant="-16" id="cBJ-Dg-8w9"/>
+                            <constraint firstItem="ypq-VV-IZq" firstAttribute="bottom" secondItem="w3X-5g-iFb" secondAttribute="bottom" id="deM-m3-FQ0"/>
+                            <constraint firstItem="w3X-5g-iFb" firstAttribute="leading" secondItem="ypq-VV-IZq" secondAttribute="leading" id="sGS-MH-6Kh"/>
+                            <constraint firstItem="d2y-Ce-gTq" firstAttribute="top" secondItem="B6d-nx-ERJ" secondAttribute="topMargin" id="xIL-N6-Mq6"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="iPe-dp-kUk"/>
+                    <connections>
+                        <outlet property="cinemaMapView" destination="w3X-5g-iFb" id="InH-eR-1Hb"/>
+                        <outlet property="filterBtn" destination="d2y-Ce-gTq" id="Xeg-3H-XjG"/>
+                        <outlet property="locationBtn" destination="rRm-RM-g5U" id="FdC-IK-Uhj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="erw-xi-It2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="991.60305343511448" y="712.67605633802816"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="QLJ-Bq-usO">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="aAC-Ff-iee" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="izm-qz-XyR">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="wqI-Pa-MxG" kind="relationship" relationship="viewControllers" id="6YK-UX-gh8"/>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="viewControllers" id="Rg6-n7-lO6"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fVU-7x-LGW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="64.885496183206101" y="-34.507042253521128"/>
         </scene>
     </scenes>
     <resources>

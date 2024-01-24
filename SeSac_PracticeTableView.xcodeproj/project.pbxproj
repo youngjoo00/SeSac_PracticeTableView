@@ -42,6 +42,10 @@
 		8E8DD6622B5006FF0029C8CE /* DetailAdvertiseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8DD6612B5006FF0029C8CE /* DetailAdvertiseViewController.swift */; };
 		8E8DD6642B500A100029C8CE /* NaviTitleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8DD6632B500A100029C8CE /* NaviTitleProtocol.swift */; };
 		8E8DD6672B5017C00029C8CE /* Cosmos in Frameworks */ = {isa = PBXBuildFile; productRef = 8E8DD6662B5017C00029C8CE /* Cosmos */; };
+		8EBFAC402B612C6600AF1A0E /* NearCinemaSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBFAC3F2B612C6600AF1A0E /* NearCinemaSecondViewController.swift */; };
+		8EBFAC422B613ECE00AF1A0E /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBFAC412B613ECE00AF1A0E /* UIButton+Extension.swift */; };
+		8EBFAC442B6146B300AF1A0E /* UIAlert+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBFAC432B6146B300AF1A0E /* UIAlert+Extension.swift */; };
+		8EBFAC472B615AE200AF1A0E /* Cinema+Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBFAC462B615AE200AF1A0E /* Cinema+Enum.swift */; };
 		8EC5AB4C2B4C292600480157 /* MagazineInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC5AB4B2B4C292600480157 /* MagazineInfoTableViewCell.swift */; };
 		8EC5AB4E2B4C2A3D00480157 /* MagazineInfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC5AB4D2B4C2A3D00480157 /* MagazineInfoTableViewController.swift */; };
 		8EC5AB512B4C306A00480157 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 8EC5AB502B4C306A00480157 /* Kingfisher */; };
@@ -94,6 +98,10 @@
 		8E8DD65F2B5006E70029C8CE /* AttractionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttractionsViewController.swift; sourceTree = "<group>"; };
 		8E8DD6612B5006FF0029C8CE /* DetailAdvertiseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailAdvertiseViewController.swift; sourceTree = "<group>"; };
 		8E8DD6632B500A100029C8CE /* NaviTitleProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaviTitleProtocol.swift; sourceTree = "<group>"; };
+		8EBFAC3F2B612C6600AF1A0E /* NearCinemaSecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearCinemaSecondViewController.swift; sourceTree = "<group>"; };
+		8EBFAC412B613ECE00AF1A0E /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
+		8EBFAC432B6146B300AF1A0E /* UIAlert+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlert+Extension.swift"; sourceTree = "<group>"; };
+		8EBFAC462B615AE200AF1A0E /* Cinema+Enum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Cinema+Enum.swift"; sourceTree = "<group>"; };
 		8EC5AB4B2B4C292600480157 /* MagazineInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagazineInfoTableViewCell.swift; sourceTree = "<group>"; };
 		8EC5AB4D2B4C2A3D00480157 /* MagazineInfoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagazineInfoTableViewController.swift; sourceTree = "<group>"; };
 		8EE994C62B54240800B09E2F /* TravelTalkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelTalkViewController.swift; sourceTree = "<group>"; };
@@ -205,9 +213,12 @@
 		8E45C3F72B558EC6008D81EC /* NearCinema */ = {
 			isa = PBXGroup;
 			children = (
+				8EBFAC482B615D8600AF1A0E /* Extension */,
+				8EBFAC452B615ACD00AF1A0E /* Enum */,
 				8E45C3FC2B558F09008D81EC /* Model */,
 				8E45C3F82B558EE4008D81EC /* NearCinema.storyboard */,
 				8E45C3FA2B558EF1008D81EC /* NearCinemaViewController.swift */,
+				8EBFAC3F2B612C6600AF1A0E /* NearCinemaSecondViewController.swift */,
 			);
 			path = NearCinema;
 			sourceTree = "<group>";
@@ -242,6 +253,23 @@
 				8E3FE6D22B4D335200D49BDE /* CityInfoCollectionViewController.swift */,
 			);
 			path = PracticeCity;
+			sourceTree = "<group>";
+		};
+		8EBFAC452B615ACD00AF1A0E /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				8EBFAC462B615AE200AF1A0E /* Cinema+Enum.swift */,
+			);
+			path = Enum;
+			sourceTree = "<group>";
+		};
+		8EBFAC482B615D8600AF1A0E /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				8EBFAC412B613ECE00AF1A0E /* UIButton+Extension.swift */,
+				8EBFAC432B6146B300AF1A0E /* UIAlert+Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		8EE994C32B540ABF00B09E2F /* Main */ = {
@@ -372,13 +400,16 @@
 				8EE994D72B54550C00B09E2F /* OtherTableViewCell.swift in Sources */,
 				8E45C3CE2B553666008D81EC /* MagazineWebViewController.swift in Sources */,
 				8E38D1042B480559001CEFF4 /* SettingsTableViewController.swift in Sources */,
+				8EBFAC422B613ECE00AF1A0E /* UIButton+Extension.swift in Sources */,
 				8EE994CC2B54262200B09E2F /* TravelTalkTableViewCell.swift in Sources */,
 				8E45C3D12B5536C0008D81EC /* IdentifierProtocol.swift in Sources */,
+				8EBFAC402B612C6600AF1A0E /* NearCinemaSecondViewController.swift in Sources */,
 				8E38D1062B480D1C001CEFF4 /* ShoppingCheckListTableViewController.swift in Sources */,
 				8E38D1082B480D39001CEFF4 /* ShoppingCheckListTableViewCell.swift in Sources */,
 				8E38D0F42B480080001CEFF4 /* ViewController.swift in Sources */,
 				8E3FE6DC2B4D4DD300D49BDE /* City_Step2_CollectionViewController.swift in Sources */,
 				8E8DD6642B500A100029C8CE /* NaviTitleProtocol.swift in Sources */,
+				8EBFAC442B6146B300AF1A0E /* UIAlert+Extension.swift in Sources */,
 				8E8DD6532B4FE2950029C8CE /* DetailCityInfoTableViewCell.swift in Sources */,
 				8E8DD6502B4FE1900029C8CE /* DetailCityInfoViewController.swift in Sources */,
 				8EE994DB2B54573800B09E2F /* MyselfTableViewCell.swift in Sources */,
@@ -395,6 +426,7 @@
 				8EC5AB4C2B4C292600480157 /* MagazineInfoTableViewCell.swift in Sources */,
 				8E3FE6DE2B4D5D0000D49BDE /* City_Step3_ViewController.swift in Sources */,
 				8E3FE6D92B4D4DA200D49BDE /* CityCollectionViewCell.swift in Sources */,
+				8EBFAC472B615AE200AF1A0E /* Cinema+Enum.swift in Sources */,
 				8EE994C72B54240800B09E2F /* TravelTalkViewController.swift in Sources */,
 				8E45C3D62B554BDC008D81EC /* City.swift in Sources */,
 				8E38D0F02B480080001CEFF4 /* AppDelegate.swift in Sources */,

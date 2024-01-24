@@ -8,6 +8,9 @@
 import UIKit
 import MapKit
 
+// 열거형을 이용한 코드 리팩토링
+// segmentTitle 값을 이용하면 스위치는 필요없지 않을까?
+
 class NearCinemaViewController: UIViewController {
     
     @IBOutlet var cinemaMapView: MKMapView!
@@ -15,11 +18,7 @@ class NearCinemaViewController: UIViewController {
     
     let originalCinemaList = NearCinema.mapAnnotations
     var annotations: [MKAnnotation] = []
-    var segmentCinemaList = NearCinema.mapAnnotations {
-        didSet {
-            setMapView()
-        }
-    }
+    var segmentCinemaList = NearCinema.mapAnnotations
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +27,7 @@ class NearCinemaViewController: UIViewController {
         cinemaMapView.delegate = self
         setSegmentControl()
     }
+    
     @IBAction func changedSegment(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
         case 0: 
